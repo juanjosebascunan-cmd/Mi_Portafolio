@@ -3,56 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio personal de Juanjosé Báscuñan">
-    <link rel="stylesheet" href="./estilos/estilos.css">
+    <meta name="description" content="Portafolio personal de Juanjosé Báscuñan - Publicista Creativo y Content Manager. Conecta marcas con personas mediante estrategias de contenido, marketing y tecnología.">
+    
+    <!-- Google Fonts: Outfit (títulos) e Inter (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Portafolio de Juanjosé Báscuñan</title>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    
+    <title>Portafolio de Juanjosé Báscuñan | Publicista Creativo</title>
 </head>
 <body>
-  
-    <header>
 
-               <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
+    <!-- Fondo de degradado animado de fondo (glow effects) -->
+    <div class="glow-bg">
+        <div class="glow-sphere glow-1"></div>
+        <div class="glow-sphere glow-2"></div>
+    </div>
+
+    <!-- Navegación Sticky Glassmorphism -->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <span class="logo-jb">JB</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#experiencia">Trayectoria</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#proyectos">Portafolio</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
-
     </header>
 
+    <!-- Contenido Principal -->
     <main>
-   <section id="inicio">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
             <div class="hero-card">
-                 <div class="columna-foto">
-                <img src="multimedia/foto perfil.jpg" alt="Foto de Juanjosé" class="foto-redonda">
-            </div>
-                <h1>Juanjosé Báscuñan</h1>
-                <h2>Publicista Creativo</h2>
-                <p>Tengo 29 años y me apasiona conectar marcas con personas. Mi enfoque combina lo mejor de la <strong>programación, el marketing, las comunicaciones y la creación de contenido</strong> para transformar ideas en experiencias digitales que generan impacto.</p>
-                <br>
+                <div class="columna-foto">
+                    <div class="foto-border-glow">
+                        <img src="multimedia/foto perfil.png" alt="Foto de Juanjosé" class="foto-redonda" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="avatar-fallback" style="display: none;">
+                            <span>JB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <span class="badge-creative">✨ Publicista Creativo & Digital Specialist</span>
+                    <h1>Juanjosé Báscuñan</h1>
+                    <h2>Conectando marcas con personas</h2>
+                    <p>Tengo 29 años y me apasiona transformar ideas en experiencias digitales que generan impacto. Mi enfoque híbrido combina lo mejor de la <strong>programación, el marketing, las comunicaciones y la creación de contenido</strong>.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#contacto" class="btn-primary">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
+                    </div>
+                </div>
             </div>
         </section>
-      </main>
-        <section id="experiencia">
-            <h2>Mi Trayectoria</h2>
+
+        <!-- Trayectoria / Timeline -->
+        <section id="experiencia" class="section-padding">
+            <div class="section-header">
+                <span class="section-subtitle">Trayectoria profesional</span>
+                <h2>Mi Camino</h2>
+                <div class="header-line"></div>
+            </div>
+            
             <div class="linea-tiempo">
-                
                 <div class="item-timeline">
                     <div class="punto"></div>
                     <div class="contenido-timeline">
-                        <h3>2024 - Martech Agency</h3>
-                        <p>Gestión de cliente para Walmart Chile.</p>
+                        <div class="time-header">
+                            <span class="fecha">2024 - Presente</span>
+                            <h3>Martech Agency</h3>
+                        </div>
+                        <h4>Gestión de Cliente (Account Lead / Specialist)</h4>
+                        <p>Liderazgo y gestión directa de cuentas clave para <strong>Walmart Chile</strong>, optimizando la comunicación estratégica e impulsando iniciativas de marketing tecnológico.</p>
                     </div>
                 </div>
 
                 <div class="item-timeline">
                     <div class="punto"></div>
                     <div class="contenido-timeline">
-                        <h3>2023 - Grupo ByL</h3>
-                        <p>Content Manager.</p>
+                        <div class="time-header">
+                            <span class="fecha">2023</span>
+                            <h3>Grupo ByL</h3>
+                        </div>
+                        <h4>Content Manager</h4>
+                        <p>Diseño y ejecución de estrategias editoriales, supervisión de marca y creación de contenido multiplataforma adaptado a las tendencias de la audiencia.</p>
                     </div>
                 </div>
 
@@ -67,128 +119,289 @@
                 <div class="item-timeline">
                     <div class="punto"></div>
                     <div class="contenido-timeline">
-                        <h3>2021 - Upcompany</h3>
-                        <p>Community Manager.</p>
+                        <div class="time-header">
+                            <span class="fecha">2022</span>
+                            <h3>Grupo Primal</h3>
+                        </div>
+                        <h4>Community Manager Encargado</h4>
+                        <p>Coordinación del equipo de redes sociales, gestión de cuentas de alto impacto y supervisión del engagement y métricas de desempeño.</p>
                     </div>
                 </div>
 
                 <div class="item-timeline">
                     <div class="punto"></div>
                     <div class="contenido-timeline">
-                        <h3>2019 - Moovmedia Group</h3>
-                        <p>Práctica Laboral.</p>
+                        <div class="time-header">
+                            <span class="fecha">2021</span>
+                            <h3>Upcompany</h3>
+                        </div>
+                        <h4>Community Manager</h4>
+                        <p>Planificación de contenidos interactivos, moderación de comunidades digitales y diseño de campañas orgánicas para diversas marcas.</p>
                     </div>
                 </div>
 
-            </div>
-        </section>
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <div class="contenido-sobre-mi">
-                <p>Como publicista y especialista digital, mi enfoque va más allá de publicar contenido; se trata de construir identidad, conectar con la audiencia y proteger la reputación de las marcas en el entorno digital.</p>
-                <p>A lo largo de mi carrera como <strong>Content Manager</strong>, he liderado proyectos creativos en redes sociales asumiendo grandes desafíos. Cuento con experiencia clave en la gestión de <strong>crisis de marca con Walmart Chile</strong>, y en la creación y ejecución de estrategias basadas en tendencias digitales para cuentas de alto impacto como <strong>Kovacs Chile, Mitsubishi y Doritos</strong>.</p>
+                <div class="item-timeline">
+                    <div class="punto"></div>
+                    <div class="contenido-timeline">
+                        <div class="time-header">
+                            <span class="fecha">2019</span>
+                            <h3>Moovmedia Group</h3>
+                        </div>
+                        <h4>Práctica Profesional</h4>
+                        <p>Inmersión en el ecosistema de marketing digital, apoyando en la conceptualización creativa de campañas y análisis de resultados publicitarios.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-<section id="proyectos">
-            <h2>Mi Portafolio Detallado</h2>
-            <p class="subtitulo-proyectos">Explora mis campañas visuales y mis repositorios de código en mis plataformas profesionales:</p>
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="section-padding">
+            <div class="section-header">
+                <span class="section-subtitle">¿Quién soy?</span>
+                <h2>Sobre Mí</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="contenido-sobre-mi-grid">
+                <div class="sobre-mi-texto">
+                    <p class="lead-text">Como publicista y especialista digital, mi enfoque va más allá de publicar contenido; se trata de **construir identidad**, conectar emocionalmente con la audiencia y proteger la reputación de las marcas en el entorno digital.</p>
+                    <p>A lo largo de mi carrera como <strong>Content Manager</strong>, he liderado proyectos creativos en redes sociales asumiendo grandes desafíos corporativos. Cuento con experiencia clave en la gestión de <strong>situaciones críticas de marca con Walmart Chile</strong>, y en la creación y ejecución de estrategias basadas en tendencias digitales para cuentas de alto impacto como <strong>Kovacs Chile, Mitsubishi y Doritos</strong>.</p>
+                    <p>Hoy en día, uno mi experiencia creativa en publicidad con el **desarrollo y la lógica web**, creando soluciones digitales completas que combinan diseño de primer nivel, código moderno y estrategia publicitaria de alto rendimiento.</p>
+                </div>
+                <div class="sobre-mi-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">29</span>
+                        <span class="stat-label">Años de Edad</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Enfoque Híbrido</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos / Redes -->
+        <section id="proyectos" class="section-padding">
+            <div class="section-header">
+                <span class="section-subtitle">Portafolio profesional</span>
+                <h2>Mis Plataformas</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <p class="subtitulo-proyectos">Explora mis campañas visuales y mis repositorios de código en mis redes profesionales:</p>
             
             <div class="contenedor-redes">
                 
-                <a href="AQUI_PONES_TU_LINK_DE_BEHANCE" target="_blank" class="tarjeta-red behance">
-                    <div class="icono-red">🎨</div>
+                <a href="https://www.instagram.com/promptmedia.ai/?__pwa=1" target="_blank" class="tarjeta-red promptmedia">
+                    <div class="icono-red">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 42px; height: 42px;">
+                            <!-- Yellow background dome -->
+                            <path d="M25,80 C25,35 75,35 75,80 Z" fill="#FFD44F" />
+                            <!-- Spark on the left -->
+                            <path d="M15,35 Q20,35 20,30 Q20,35 25,35 Q20,35 20,40 Q20,35 15,35 Z" fill="#8A8A8A" />
+                            <!-- Spark lines -->
+                            <line x1="20" y1="24" x2="20" y2="27" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="20" y1="43" x2="20" y2="46" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="9" y1="35" x2="12" y2="35" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="28" y1="35" x2="31" y2="35" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="12" y1="27" x2="14" y2="29" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="26" y1="27" x2="28" y2="29" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="12" y1="43" x2="14" y2="41" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="26" y1="43" x2="28" y2="41" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" />
+                            <!-- Robot Body Base -->
+                            <path d="M38,78 C38,72 62,72 62,78" stroke="#000000" stroke-width="4.5" stroke-linecap="round" />
+                            <circle cx="45" cy="80" r="2.5" fill="#000000" />
+                            <circle cx="55" cy="80" r="2.5" fill="#000000" />
+                            <!-- Robot Head Outline -->
+                            <rect x="30" y="44" width="40" height="28" rx="14" fill="#FFD44F" stroke="#000000" stroke-width="4.5" />
+                            <!-- Robot Ears -->
+                            <path d="M30,53 C26,53 26,63 30,63" fill="#FFD44F" stroke="#000000" stroke-width="4.5" />
+                            <path d="M70,53 C74,53 74,63 70,63" fill="#FFD44F" stroke="#000000" stroke-width="4.5" />
+                            <!-- Robot Head Top Antenna/Handle -->
+                            <path d="M43,44 C43,40 57,40 57,44" fill="none" stroke="#000000" stroke-width="4.5" />
+                            <!-- Eyes -->
+                            <circle cx="42" cy="58" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="4.5" />
+                            <circle cx="42" cy="58" r="3.5" fill="#000000" />
+                            <circle cx="58" cy="58" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="4.5" />
+                            <circle cx="58" cy="58" r="3.5" fill="#000000" />
+                            <!-- Mouth -->
+                            <rect x="44" y="68" width="12" height="4" rx="2" fill="#000000" />
+                            <!-- Freckles -->
+                            <circle cx="37" cy="67" r="1" fill="#000000" />
+                            <circle cx="39" cy="69" r="1" fill="#000000" />
+                            <circle cx="61" cy="67" r="1" fill="#000000" />
+                            <circle cx="63" cy="69" r="1" fill="#000000" />
+                        </svg>
+                    </div>
+                    <h3>Promptmedia IA</h3>
+                    <p>Agencia de Marketing & Freelance de Inteligencia Artificial para Prompt Engineers.</p>
+                    <span class="red-action">Ver en Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
+
+                <a href="https://www.behance.net/juanjosebascunan" target="_blank" class="tarjeta-red behance">
+                    <div class="icono-red">
+                        <i class="fa-brands fa-behance"></i>
+                    </div>
                     <h3>Behance</h3>
-                    <p>Campañas, diseño, branding y contenido visual.</p>
+                    <p>Campañas publicitarias, diseño gráfico, branding corporativo y contenido visual de alto impacto.</p>
+                    <span class="red-action">Ver Portafolio Creativo <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                 </a>
 
-                <a href="AQUI_PONES_TU_LINK_DE_GITHUB" target="_blank" class="tarjeta-red github">
-                    <div class="icono-red">💻</div>
+                <a href="https://github.com/juanjosebascunan-cmd" target="_blank" class="tarjeta-red github">
+                    <div class="icono-red">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
                     <h3>GitHub</h3>
-                    <p>Repositorios, código fuente y desarrollo web.</p>
+                    <p>Repositorios, lógica de programación, código fuente estructurado y proyectos de desarrollo web.</p>
+                    <span class="red-action">Ver Repositorios <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                 </a>
 
-                <a href="AQUI_PONES_TU_LINK_DE_LINKEDIN" target="_blank" class="tarjeta-red linkedin">
-                    <div class="icono-red">💼</div>
+                <a href="https://www.linkedin.com/in/juan-jos%C3%A9-bascu%C3%B1an-carmona-31a151207/" target="_blank" class="tarjeta-red linkedin">
+                    <div class="icono-red">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
                     <h3>LinkedIn</h3>
-                    <p>Artículos, networking y trayectoria detallada.</p>
+                    <p>Networking profesional, artículos de opinión sobre marketing, tendencias y trayectoria profesional detallada.</p>
+                    <span class="red-action">Conectar en LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                 </a>
 
             </div>
         </section>
 
-            <section id="habilidades">
-            <h2>Mis Habilidades</h2>
+        <!-- Habilidades / Skills -->
+        <section id="habilidades" class="section-padding">
+            <div class="section-header">
+                <span class="section-subtitle">Mis competencias</span>
+                <h2>Habilidades Clave</h2>
+                <div class="header-line"></div>
+            </div>
             
             <div class="contenedor-skills">
                 
                 <div class="categoria-skill">
-                    <h3>Marketing & Estrategia</h3>
+                    <div class="skill-header-card">
+                        <i class="fa-solid fa-bullseye skill-icon-cat"></i>
+                        <h3>Marketing & Estrategia</h3>
+                    </div>
                     <div class="grupo-tags">
-                        <span class="tag">Community Management</span>
-                        <span class="tag">Manejo de Crisis</span>
-                        <span class="tag">Estrategia de Contenidos</span>
-                        <span class="tag">Meta Ads</span>
-                        <span class="tag">Análisis de Tendencias</span>
+                        <span class="tag"><i class="fa-solid fa-hashtag"></i> Community Management</span>
+                        <span class="tag"><i class="fa-solid fa-triangle-exclamation"></i> Manejo de Crisis</span>
+                        <span class="tag"><i class="fa-solid fa-lightbulb"></i> Estrategia de Contenidos</span>
+                        <span class="tag"><i class="fa-solid fa-rectangle-ad"></i> Meta Ads</span>
+                        <span class="tag"><i class="fa-solid fa-chart-line"></i> Análisis de Tendencias</span>
                     </div>
                 </div>
 
                 <div class="categoria-skill">
-                    <h3>Creación de Contenido</h3>
+                    <div class="skill-header-card">
+                        <i class="fa-solid fa-pen-nib skill-icon-cat"></i>
+                        <h3>Creación de Contenido</h3>
+                    </div>
                     <div class="grupo-tags">
-                        <span class="tag">Copywriting</span>
-                        <span class="tag">Adobe Creative Cloud</span>
-                        <span class="tag">CapCut / Premiere</span>
-                        <span class="tag">Diseño Gráfico</span>
-                        <span class="tag">Storytelling</span>
+                        <span class="tag"><i class="fa-solid fa-feather"></i> Copywriting</span>
+                        <span class="tag"><i class="fa-solid fa-photo-film"></i> Adobe Creative Cloud</span>
+                        <span class="tag"><i class="fa-solid fa-video"></i> CapCut / Premiere</span>
+                        <span class="tag"><i class="fa-solid fa-compass"></i> Diseño Gráfico</span>
+                        <span class="tag"><i class="fa-solid fa-book-open"></i> Storytelling</span>
                     </div>
                 </div>
 
                 <div class="categoria-skill">
-                    <h3>Tecnología & Web</h3>
+                    <div class="skill-header-card">
+                        <i class="fa-solid fa-code skill-icon-cat"></i>
+                        <h3>Tecnología & Web</h3>
+                    </div>
                     <div class="grupo-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Lógica de Programación</span>
-                        <span class="tag">Gestión de CMS</span>
+                        <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span class="tag"><i class="fa-brands fa-css3-alt"></i> CSS3 / Layouts</span>
+                        <span class="tag"><i class="fa-solid fa-brain"></i> Lógica de Programación</span>
+                        <span class="tag"><i class="fa-solid fa-terminal"></i> Git & Control de Versiones</span>
+                        <span class="tag"><i class="fa-solid fa-cubes"></i> Gestión de CMS</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
-   <section id="contacto">
-            <h2>Trabajemos Juntos</h2>
-            <p>¿Tienes un proyecto en mente o buscas potenciar tu marca? ¡Hablemos!</p>
+        <!-- Contacto -->
+        <section id="contacto" class="section-padding">
+            <div class="section-header">
+                <span class="section-subtitle">¿Conversamos?</span>
+                <h2>Trabajemos Juntos</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <p class="subtitulo-contacto">¿Tienes una idea en mente, buscas potenciar tu marca en redes o requieres soporte en comunicación digital y web? ¡Escríbeme!</p>
             
             <div class="contenedor-contacto">
                 <a href="mailto:juanjosebascunan@gmail.com" class="tarjeta-contacto">
-                    <div class="icono-contacto">✉️</div>
+                    <div class="icono-contacto">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
                     <h3>Envíame un correo</h3>
                     <p class="correo-texto">juanjosebascunan@gmail.com</p>
-                    <span class="btn-falso">Escribir mensaje</span>
+                    <span class="btn-falso">Escribir Mensaje <i class="fa-solid fa-paper-plane"></i></span>
                 </a>
             </div>
         </section>
+
+        <!-- Encuéntrame (Mapa de Santiago) -->
+        <section id="contactus" class="section-padding">
+            <div class="section-header">
+                <span class="section-subtitle">Ubicación</span>
+                <h2>Encuéntrame</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="map-card">
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Ubicación actual</h4>
+                            <p>Santiago, Región Metropolitana, Chile</p>
+                        </div>
+                    </div>
+                    <div class="map-info-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <h4>Disponibilidad</h4>
+                            <p>Proyectos locales e internacionales en remoto</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.201807156185!2d-70.66926548478201!3d-33.44888968078181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c59c2d9f735d%3A0xa0bc5dcad4ffb1e8!2sSantiago%2C%20Regi%C3%B3n%20Metropolitana%20de%20Santiago%2C%20Chile!5e0!3m2!1ses!2sus!4v1588888888888" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
     </main>
-   <footer>
-    <div class="footer-content">
-        <p>&copy; 2026 Juanjosé Báscuñan | Publicista Creativo</p>
-        
-        <div class="redes-footer">
-            <a href="#" target="_blank" class="icono-f ig"><svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
-            <a href="#" target="_blank" class="icono-f tk"><svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 162.55 186.8c1.2 0 2.39.02 3.59.06v81.18a81.27 81.27 0 1 0 77.72 81.18V0h81.18a212.04 212.04 0 0 0 122.96 122.82v87.09z"/></svg></a>
-            <a href="#" target="_blank" class="icono-f sora"><svg width="20" height="20" fill="currentColor" viewBox="0 0 512 512"><path d="M327.5 85.2c-4.5 1.7-7.5 5.3-8.3 9.8l-9.9 56.4-56.4 9.9c-4.5.8-8.1 3.8-9.8 8.3s-1.1 9.5 1.2 13.4l39.8 68.9-68.9-39.8c-3.9-2.3-8.9-2.9-13.4-1.2s-7.5 5.3-8.3 9.8l-9.9 56.4-56.4 9.9c-4.5.8-8.1 3.8-9.8 8.3s-1.1 9.5 1.2 13.4l39.8 68.9-68.9-39.8c-3.9-2.3-8.9-2.9-13.4-1.2s-7.5 5.3-8.3 9.8l-9.9 56.4-56.4 9.9c-4.5.8-8.1 3.8-9.8 8.3s-1.1 9.5 1.2 13.4l68.9 39.8-39.8 68.9c-2.3 3.9-2.9 8.9-1.2 13.4s5.3 7.5 9.8 8.3l56.4 9.9 9.9 56.4c.8 4.5 3.8 8.1 8.3 9.8s9.5 1.1 13.4-1.2l68.9-39.8 39.8 68.9c3.9 2.3 8.9 2.9 13.4 1.2s7.5-5.3 8.3-9.8l9.9-56.4 56.4-9.9c4.5-.8 8.1-3.8 9.8-8.3s1.1-9.5-1.2-13.4l-39.8-68.9 68.9 39.8c3.9 2.3 8.9 2.9 13.4 1.2s7.5-5.3 8.3-9.8l9.9-56.4 56.4-9.9c4.5-.8 8.1-3.8 9.8-8.3s1.1-9.5-1.2-13.4l-68.9-39.8 39.8-68.9c2.3-3.9 2.9-8.9 1.2-13.4s-5.3-7.5-9.8-8.3l-56.4-9.9-9.9-56.4c-.8-4.5-3.8-8.1-8.3-9.8s-9.5-1.1-13.4 1.2L327.5 85.2z"/></svg></a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Juanjosé Báscuñan | Publicista Creativo</p>
+            <div class="redes-footer">
+                <a href="https://www.instagram.com/promptmedia.ai/?__pwa=1" target="_blank" aria-label="Instagram" class="icono-f ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@publimetricas" target="_blank" aria-label="TikTok" class="icono-f tk"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://higgsfield.ai/@jjbascunanc" target="_blank" aria-label="Higgsfield" class="icono-f higgsfield"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+            </div>
         </div>
-    </div>
-    <!-- nueva sección con mapa de Santiago -->
-    <section id="contactus">
-        <h2>Encuéntrame</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.201807156185!2d-70.66926548478201!3d-33.44888968078181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c59c2d9f735d%3A0xa0bc5dcad4ffb1e8!2sSantiago%2C%20Regi%C3%B3n%20Metropolitana%20de%20Santiago%2C%20Chile!5e0!3m2!1ses!2sus!4v1588888888888" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </div>
-    </section>
-</footer>
+    </footer>
+
+    <!-- Script de interactividad -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
-
