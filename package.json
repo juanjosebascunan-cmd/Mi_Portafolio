@@ -1,0 +1,16 @@
+{
+  "name": "mi-portafolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portafolio con protocolos de actualización y benchmark estático",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "check": "node tools/check.mjs",
+    "test": "node --test tools/quality.test.mjs",
+    "benchmark": "node tools/benchmark.mjs",
+    "benchmark:compare": "node tools/benchmark.mjs --compare",
+    "benchmark:baseline": "node tools/benchmark.mjs --baseline",
+    "validate": "npm run check && npm test && npm run benchmark:compare",
+    "base44:export": "node tools/export-base44.mjs"
+  }
+}

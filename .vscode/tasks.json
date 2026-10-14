@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Proyecto: validar antes de GitHub",
+      "type": "npm",
+      "script": "validate",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Proyecto: medir archivos",
+      "type": "npm",
+      "script": "benchmark",
+      "problemMatcher": []
+    },
+    {
+      "label": "Proyecto: comparar con referencia",
+      "type": "npm",
+      "script": "benchmark:compare",
+      "problemMatcher": []
+    },
+    {
+      "label": "Base44: preparar resultado para el chat",
+      "type": "npm",
+      "script": "base44:export",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "app_id": "6a14e7a8f250c1706470c6e2",
+  "app_name": "PrintMate AI",
+  "project_key": "juanjosebascunan-cmd/Mi_Portafolio",
+  "entities": { "project": "DevProject", "protocol": "UpdateProtocol", "benchmark": "BenchmarkRun" },
+  "sync_mode": "connected_assistant",
+  "access": "admin"
+}

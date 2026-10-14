@@ -1,0 +1,85 @@
+{
+  "name": "BenchmarkRun",
+  "type": "object",
+  "properties": {
+    "run_key": {
+      "type": "string"
+    },
+    "project_key": {
+      "type": "string"
+    },
+    "measured_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "commit_sha": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "dirty": {
+      "type": "boolean"
+    },
+    "content_sha256": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "passed",
+        "failed"
+      ]
+    },
+    "total_bytes": {
+      "type": "integer"
+    },
+    "gzip_bytes": {
+      "type": "integer"
+    },
+    "files_count": {
+      "type": "integer"
+    },
+    "check_errors": {
+      "type": "integer"
+    },
+    "report_json": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "pull_request_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_key",
+    "project_key",
+    "measured_at",
+    "status",
+    "content_sha256"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
