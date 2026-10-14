@@ -1,0 +1,55 @@
+{
+  "name": "UpdateProtocol",
+  "type": "object",
+  "properties": {
+    "protocol_key": {
+      "type": "string"
+    },
+    "project_key": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "sequence": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    },
+    "instructions": {
+      "type": "string"
+    },
+    "acceptance_criteria": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "protocol_key",
+    "project_key",
+    "title",
+    "instructions"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

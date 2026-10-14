@@ -1,0 +1,42 @@
+name: Validación del proyecto
+
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Comprobar archivos y referencias
+        run: npm run check
+      - name: Probar los controles de calidad
+        if: ${{ !cancelled() }}
+        run: npm test
+      - name: Comparar peso con referencia
+        if: ${{ !cancelled() }}
+        run: npm run benchmark:compare
+      - name: Guardar resultados
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: resultados-${{ matrix.os }}
+          path: reports/
+          if-no-files-found: warn
+          retention-days: 14

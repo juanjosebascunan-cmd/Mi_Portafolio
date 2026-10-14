@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "project": "Mi_Portafolio",
+  "total_bytes": 607103,
+  "content_sha256": "8f4a5292dd9faf9fc1e2393299fc7ddb59c4f7953a504bd69a72592addc5fb6e",
+  "files": [
+    {
+      "path": "estilos/estilos.css",
+      "bytes": 26489,
+      "gzip_bytes": 5196,
+      "sha256": "e9717586ce5ae90cdb530bf388c41742fb807a617b67420a5638023dca4a3dc1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 22574,
+      "gzip_bytes": 5070,
+      "sha256": "01b526bcc7368a1630630d46f75b30dcccc0d04c1d4490e0226b742002b51031"
+    },
+    {
+      "path": "js/script.js",
+      "bytes": 5903,
+      "gzip_bytes": 1770,
+      "sha256": "1f913297e16119316e5c0756451f5b7e6f3e4f4365135664c72b0810f7220ce9"
+    },
+    {
+      "path": "multimedia/foto perfil.jpg",
+      "bytes": 178332,
+      "gzip_bytes": 166037,
+      "sha256": "b32632d491f3bab1ec98127c89e1a9077b5fa3cf026df7bd5fcbca256d936584"
+    },
+    {
+      "path": "multimedia/foto perfil.png",
+      "bytes": 218995,
+      "gzip_bytes": 218309,
+      "sha256": "250bf374fd19570c3b2cf5bce4b85acc05b4f56b95456ccf480b69bb941e18b4"
+    },
+    {
+      "path": "multimedia/promptmedia_logo.png",
+      "bytes": 154810,
+      "gzip_bytes": 148730,
+      "sha256": "4b836edfaf38098c599441369fe6ff605f05528365c95a205f2a05f6dbd2bf3d"
+    }
+  ]
+}
